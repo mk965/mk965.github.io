@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.input,
+			.input input {
+				font-size: 66px;
+			}
+
+			#numBox {
+				font-size: 66px;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="input">
+			<input id="score" type="number" autofocus="autofocus" onKeypress="return (/[\d.]/.test(String.fromCharCode(event.keyCode)))":max="9999999" placeholder="输入分数" valueue="">
+		</div>
+		<div id="numBox">
+			总分：<span id="num">100</span>
+		</div>
+		<hr >
+		<ul id="jilu" style="">
+			<span id="">
+				计算记录
+			</span>
+		</ul>
+	</body>
+
+	<script type="text/javascript">
+		
+		var jilu = '100';
+		document.onkeydown = function(event) {
+			console.log(event.keyCode);
+			//-
+			var score = parseFloat(document.getElementById("score").value);
+			var num = parseFloat(document.getElementById("num").innerText);
+			if ((event.keyCode == 17 || event.keyCode == 109) && document.getElementById("score").value.length != 0) {
+				jilu = jilu + '-' + score;
+				console.log(jilu);
+				console.log("NUM : " + score);
+				document.getElementById("num").innerText = num - score;
+				document.getElementById("score").value = '';
+			}
+			//回车
+			else if (event.keyCode == 13) {
+				if (document.getElementById("score").value.length != 0){	
+					jilu = jilu + '-' + score;
+					document.getElementById("num").innerText = (num - score);
+				}
+				
+				
+				//获得ul
+				var ul = document.getElementById("jilu");
+				//创建li
+				var li = document.createElement("li");
+				var txt = document.createTextNode(jilu + " = " + document.getElementById("num").innerText);
+				li.appendChild(txt);
+				//添加子节点li
+				ul.appendChild(li);
+				
+				jilu = '100';
+				document.getElementById("score").value = '';
+				document.getElementById("num").innerText = 100;
+			}
+		};
+	</script>
+</html>
