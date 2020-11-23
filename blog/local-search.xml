@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>这是第一篇文章</title>
+    <link href="/blog/2020/11/23/%E8%BF%99%E6%98%AF%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <url>/blog/2020/11/23/%E8%BF%99%E6%98%AF%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[<p>从上大学时就开始自己捣鼓博客，之前的博客一直都是 <code>WordPress</code>, 本站是第一次使用 hexo 创建的静态站，记录生活，附加技术。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>post title with whitespace</title>
     <link href="/blog/2020/11/17/post-title-with-whitespace/"/>
     <url>/blog/2020/11/17/post-title-with-whitespace/</url>
